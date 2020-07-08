@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="mb-4">Dashboard</h1>
+      <h5>Prior Year: 2015</h5>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col col-md-3">
+      <div class="form-group">
+        <select
+          name="stateDrop"
+          [(ngModel)]="selectedState"
+          class="form-control"
+          id="stateDropdown"
+          (ngModelChange)="onStateChange($event)"
+        >
+          <option value="">Select State</option>
+          <option
+            *ngFor="let hospital of hospitals"
+            [value]="hospital.region"
+            >{{ hospital.region }}</option
+          >
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <app-statistics [hospital]="selectedHospital"></app-statistics>
+    </div>
+    <div class="col-12 col-md-6">
+      <app-graph [barChartData]="graphData"></app-graph>
+    </div>
+  </div>
+</div>

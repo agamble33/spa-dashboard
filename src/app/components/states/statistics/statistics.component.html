@@ -1,0 +1,42 @@
+<div *ngIf="hospital" class="mb-4">
+  <div class="card">
+    <div class="card-body">
+      <table class="table">
+        <thead class="">
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Task</th>
+            <th scope="col">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>At Least One Measure</td>
+            <td>{{ hospital.atleast_one_measure }}</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Immunization Measure</td>
+            <td>{{ hospital.immunization_measure }}</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Reportable Results</td>
+            <td>{{ hospital.reportable_lab_results_measure }}</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Syndromic surveillance measure</td>
+            <td>{{ hospital.syndromic_surveillance_measure }}</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Registry Measure</td>
+            <td>{{ hospital.registry_measure }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
